@@ -4,7 +4,6 @@ This script gets all the exercises in codingbat and creates a base file in the a
 Author: Ha Min Ko
 """
 
-
 import requests, bs4
 import os
 from os.path import exists
@@ -46,28 +45,29 @@ for link in html.select('div[class=summ] > a'):
         if (exists(title)):
             print(title, 'exists already.')
         else:
-            functiondefiner = html2.select('div[id=ace_div]')[0].text.strip()
-            functiondescription = html2.select('p[class=max2]')[0].text.strip()
-            functiontest = []
+            function_definer = html2.select('div[id=ace_div]')[0].text.strip()
+            function_description = html2.select('p[class=max2]')[0].text.strip()
+            function_test = []
             for br in html2.find_all('br'):
                 following = br.nextSibling
                 if name1 in following:
-                    functiontest.append(following)
+                    function_test.append(following)
 
             # Create a file that can be written to.
             print('Creating file', title, 'in folder', name )
             outputfile = open(title, 'w')
 
             # Write data to the file:
-            outputfile.write(functiondefiner)
+            outputfile.write(function_definer)
             outputfile.write('\n\t"""')
-            outputfile.write('\n\t' + functiondescription)
+            outputfile.write('\n\t' + function_description)
             outputfile.write('\n\t"""')
             outputfile.write('\n\tpass')
             outputfile.write('\n')
-            for test in functiontest:
+            for test in function_test:
                 test = test.split('→')[0].strip()
                 outputfile.write('\nprint(' + test + ')')
+            outputfile.write('\n')
 
             # Close the file after writing to it
             outputfile.close()
