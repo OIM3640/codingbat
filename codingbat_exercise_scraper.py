@@ -1,6 +1,12 @@
 """
 This script gets all the exercises in codingbat and creates a base file in the appropriate folder to edit.
 
+You need to install requests and bs4.
+
+You can do the following to install:
+pip install bs4
+pip install requests
+
 Author: Ha Min Ko
 """
 
