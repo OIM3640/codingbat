@@ -2,7 +2,7 @@ def first_half(str):
 	"""
 	Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
 	"""
-	pass
+	return str[0:len(str)/2]
 
 print(first_half('WooHoo'))
 print(first_half('HelloThere'))
