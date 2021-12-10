@@ -3,12 +3,12 @@ def count_evens(nums):
 
     Note: the % "mod" operator computes the remainder, e.g. 5 % 2 is 1.
     """
-    
     evens = 0
     for number in nums:
         if number % 2 == 0:
             evens += 1
     return evens
+
 
 
 print(count_evens([2, 1, 2, 3, 4]))
