@@ -6,8 +6,6 @@ def monkey_trouble(input1, input2):
 
 
 
-
-
 monkey_trouble(True, True)
 monkey_trouble(False, False)
 monkey_trouble(True, False)

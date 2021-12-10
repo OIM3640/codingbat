@@ -20,5 +20,5 @@ def pos_neg(num1, num2, input):
 
 pos_neg(1, -1, False)
 pos_neg(-1, 1, False)
-pos_neg(-4, 5, True)
+pos_neg(-4, -5, True)
 
