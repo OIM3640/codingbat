@@ -6,3 +6,9 @@ def string_times(str, n):
 print(string_times('Hi', 2))
 print(string_times('Hi', 3))
 print(string_times('Hi', 1))
+
+# Alternative solution:
+# result = ""
+# for i in range(n):
+#   result = result + str
+# return result
